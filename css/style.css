@@ -17,15 +17,15 @@
     --card-bg-hover: rgba(255, 255, 255, 0.07);
     --border-color: rgba(255, 255, 255, 0.08);
     --border-hover: rgba(59, 130, 246, 0.3);
-    
+
     --color-accent: #2563EB;
     --color-light-blue: #3B82F6;
     --text-primary: #FFFFFF;
     --text-secondary: #94A3B8;
-    
+
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
-    
+
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-fast: all 0.2s ease-in-out;
 }
@@ -41,6 +41,7 @@ html {
     font-size: 16px;
     background-color: var(--bg-primary);
     color: var(--text-primary);
+    overflow-x: hidden;
 }
 
 body {
@@ -71,7 +72,10 @@ img {
     display: block;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
     font-family: inherit;
     background: none;
     border: none;
@@ -186,6 +190,7 @@ button, input, textarea, select {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 1000;
     transition: var(--transition-smooth);
 }
@@ -249,7 +254,8 @@ button, input, textarea, select {
     padding: 0.5rem 0;
 }
 
-.nav__link:hover, .nav__link.active-link {
+.nav__link:hover,
+.nav__link.active-link {
     color: var(--text-primary);
 }
 
@@ -265,7 +271,8 @@ button, input, textarea, select {
     transition: var(--transition-fast);
 }
 
-.nav__link:hover::after, .nav__link.active-link::after {
+.nav__link:hover::after,
+.nav__link.active-link::after {
     width: 100%;
 }
 
@@ -519,14 +526,24 @@ section {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #10b981; /* Green live dot */
+    background-color: #10b981;
+    /* Green live dot */
     box-shadow: 0 0 10px #10b981;
     animation: livePulse 2s infinite;
 }
 
 @keyframes livePulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.4); opacity: 0.5; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.4);
+        opacity: 0.5;
+    }
 }
 
 .hero__badge-text {
@@ -673,10 +690,29 @@ section {
     height: 28px;
 }
 
-.icon-powerbi { top: 12%; left: 8%; animation: floatIcon 4s ease-in-out infinite; }
-.icon-sql { top: 6%; right: 10%; animation: floatIcon 4.5s ease-in-out infinite 0.5s; }
-.icon-excel { bottom: 15%; left: 5%; animation: floatIcon 3.8s ease-in-out infinite 1s; }
-.icon-python { bottom: 8%; right: 12%; animation: floatIcon 4.2s ease-in-out infinite 1.5s; }
+.icon-powerbi {
+    top: 12%;
+    left: 8%;
+    animation: floatIcon 4s ease-in-out infinite;
+}
+
+.icon-sql {
+    top: 6%;
+    right: 10%;
+    animation: floatIcon 4.5s ease-in-out infinite 0.5s;
+}
+
+.icon-excel {
+    bottom: 15%;
+    left: 5%;
+    animation: floatIcon 3.8s ease-in-out infinite 1s;
+}
+
+.icon-python {
+    bottom: 8%;
+    right: 12%;
+    animation: floatIcon 4.2s ease-in-out infinite 1.5s;
+}
 
 /* ==========================================================================
    9. About Section
@@ -823,7 +859,8 @@ section {
 }
 
 .skills__progress-bar {
-    width: 0%; /* Animates from script */
+    width: 0%;
+    /* Animates from script */
     height: 100%;
     background: linear-gradient(90deg, var(--color-accent), var(--color-light-blue));
     border-radius: 10px;
@@ -1287,11 +1324,11 @@ textarea.form__input {
     resize: none;
 }
 
-.form__group textarea ~ .form__label {
+.form__group textarea~.form__label {
     top: 25px;
 }
 
-.form__group.focused textarea ~ .form__label {
+.form__group.focused textarea~.form__label {
     top: -12px;
 }
 
@@ -1425,7 +1462,8 @@ textarea.form__input {
 }
 
 .toast-icon {
-    color: #10b981; /* Green success */
+    color: #10b981;
+    /* Green success */
 }
 
 .toast-progress {
